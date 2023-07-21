@@ -10,7 +10,7 @@ jobs:
 
         steps:
             - name: Checkout source code
-              uses: actions/checkout@main
+              uses: actions/checkout@v2
         
             - name: Authenticate user
               uses: aws-actions/configure-aws-credentials@v2
