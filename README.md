@@ -8,3 +8,4 @@
 1. Create a file in ./github/workflows
 2. Set up an IAM user for github to assume and generate access keys
 3. Add the credentials to github secrets
+4. Just create your stack! 
