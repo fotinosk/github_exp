@@ -10,7 +10,7 @@ permissions:
 
 env:
     region: eu-central-1
-    role: arn:aws:iam::458911227686:role/GitHubRole
+    role: arn:aws:iam::<YOUR ACCOUNT ID>:role/<YOUR ROLE NAME>
 
 jobs:
     deploy:
