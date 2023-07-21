@@ -22,7 +22,7 @@ jobs:
             - name: Assume Role
               uses: aws-actions/configure-aws-credentials@v2
               with: 
-                role-to-assume: aws-actions/configure-aws-credentials@v2
+                role-to-assume: arn:aws:iam::458911227686:role/GitHubRole
                 aws-region:  "eu-central-1"
 
             - name: List buckets
