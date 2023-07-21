@@ -4,6 +4,14 @@ on:
     push:
         branches: ['main']
 
+permissions:
+  id-token: write
+  contents: read
+
+env:
+    region: eu-central-1
+    role: arn:aws:iam::458911227686:role/GitHubRole
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -22,8 +30,8 @@ jobs:
             - name: Assume Role
               uses: aws-actions/configure-aws-credentials@v2
               with: 
-                role-to-assume: arn:aws:iam::458911227686:role/GitHubRole
-                aws-region:  "eu-central-1"
+                role-to-assume: ${{ env.role }}
+                aws-region: ${{ env.region }}
 
             - name: List buckets
               run: |
